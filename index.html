@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Gaming Gadgets on Rent | Bangalore</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ============ HEADER ============ -->
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a href="#" class="logo" aria-label="Home"><span class="logo__a">Your</span><span class="logo__b">Brand</span></a>
+
+      <button class="date-pill" data-open-dates>
+        <span class="date-pill__seg date-pill__city"><svg class="ic"><use href="#i-pin" /></svg> Bangalore <svg class="ic ic--sm"><use href="#i-chev" /></svg></span>
+        <span class="date-pill__seg"><svg class="ic"><use href="#i-cal" /></svg> <span id="hdr-del">Delivery Date</span></span>
+        <span class="date-pill__seg"><svg class="ic"><use href="#i-cal" /></svg> <span id="hdr-pick">Pickup Date</span></span>
+        <span class="date-pill__cta"><svg class="ic"><use href="#i-cal" /></svg> Select</span>
+      </button>
+
+      <div class="topbar__actions">
+        <button class="icon-btn" aria-label="Search"><svg class="ic"><use href="#i-search" /></svg></button>
+        <button class="icon-btn" aria-label="Cart"><svg class="ic"><use href="#i-cart" /></svg></button>
+        <button class="login"><span class="avatar"><svg class="ic"><use href="#i-user" /></svg></span>Hi, Login</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="supercats" aria-label="Categories">
+    <a href="#">Photography</a>
+    <a href="#" class="active">Gaming</a>
+    <a href="#">Outdoor</a>
+    <a href="#">Entertainment</a>
+  </nav>
+
+  <!-- ============ MAIN ============ -->
+  <div class="layout">
+    <aside class="sidebar" aria-label="Sub-categories">
+      <ul id="subcats"></ul>
+    </aside>
+
+    <main class="content">
+      <section class="hero">
+        <div class="hero__art hero__art--left" aria-hidden="true"><svg><use href="#i-console" /></svg></div>
+        <div class="hero__text">
+          <h1>Gaming Consoles</h1>
+          <p>Play the newest consoles and VR at home with <b class="hero__brand">YourBrand</b>. PS5, Xbox, Meta Quest and racing rigs, delivered to your door.</p>
+          <div class="hero__brands"><span>XBOX</span><i></i><span>PS5</span><i></i><span>Meta</span></div>
+        </div>
+        <div class="hero__art hero__art--right" aria-hidden="true"><svg><use href="#i-vr" /></svg></div>
+      </section>
+
+      <div class="listing-head">
+        <h2>Gaming Gadgets On Rent</h2>
+        <span class="muted">Total items: <b data-total>0</b> items</span>
+      </div>
+
+      <div id="grid" class="grid"></div>
+
+      <div class="showing">
+        <p>Showing <span id="shown">0</span> of <span data-total>0</span> results</p>
+        <button class="btn-outline" id="show-more">Show More</button>
+      </div>
+    </main>
+  </div>
+
+  <section class="faq">
+    <h2>Frequently Asked Questions (FAQs)</h2>
+    <div id="faq-list"></div>
+    <button class="btn-ghost" id="faq-more">View more FAQ's</button>
+  </section>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="#">Bangalore</a> <svg class="ic ic--sm"><use href="#i-chev-r" /></svg> <span class="current">Gaming gadgets on rent</span>
+  </nav>
+
+  <!-- ============ SOCIAL PROOF ============ -->
+  <section class="proof">
+    <h2>Served more than <em>1 Lakh Orders</em></h2>
+    <div class="carousel" id="carousel">
+      <div class="carousel__track" id="reviews"></div>
+    </div>
+    <div class="stats">
+      <div><strong>250Cr<span>+</span></strong><p>Saved Together</p></div>
+      <div><strong>4.5M <span>Kg</span></strong><p>CO₂e Emissions Saved</p></div>
+      <div><strong>100K<span>+</span></strong><p>Products In Circulation</p></div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__cats" id="footer-cats"></div>
+
+      <div class="footer__seo">
+        <h4><a href="#">Renting from YourBrand in Bangalore</a></h4>
+        <p>Need a console for the weekend, a camera for a shoot or gear for a trek? Rent it in Bangalore with free doorstep delivery and pickup, flexible rental periods and no security deposit. Placeholder copy: replace with your own description.</p>
+        <h5>Categories on Rent</h5>
+        <h4><a href="#">Action Cameras on Rent</a></h4>
+        <p>Short category blurb goes here. Describe the range of products in this category and who it is for.</p>
+        <div class="seo-more" id="seo-more" hidden>
+          <h4><a href="#">Gaming Consoles on Rent</a></h4>
+          <p>Another category blurb. Add as many as you need; they stay collapsed behind "Read More".</p>
+        </div>
+        <button class="read-more" id="read-more">Read More <svg class="ic ic--sm"><use href="#i-chev" /></svg></button>
+      </div>
+
+      <div class="footer__band"><a href="#" class="logo logo--footer"><span class="logo__a">Your</span><span class="logo__b">Brand</span></a></div>
+
+      <div class="footer__links">
+        <div><h4>YourBrand</h4><a href="#">About</a><a href="#">Why YourBrand</a><a href="#">Sitemap</a><a href="#">CarePlan</a></div>
+        <div><h4>Become a Pal</h4><a href="#">For Creators</a><a href="#">Careers</a><a href="#">For Brands</a><a href="#">Asset Funding Program <span class="new">New</span></a><a href="#">Rent Your Gear <span class="new">New</span></a></div>
+        <div><h4>Information</h4><a href="#">How it works?</a><a href="#">FAQs</a><a href="#">Verification</a><a href="#">Cancellation Policy</a><a href="#">Life at YourBrand</a></div>
+        <div><h4>Policies</h4><a href="#">Terms &amp; Condition</a><a href="#">Shipping policy</a><a href="#">Damage Policy</a><a href="#">Terms of Use</a><a href="#">Privacy Policy</a></div>
+        <div class="help"><h4>Need Help</h4>
+          <a href="#"><svg class="ic"><use href="#i-headset" /></svg> Contact Support</a>
+          <a href="#">Contact Us</a>
+          <a href="mailto:care@example.com"><svg class="ic"><use href="#i-mail" /></svg> care@example.com</a>
+          <div class="socials">
+            <a href="#" aria-label="Facebook"><svg class="ic"><use href="#i-fb" /></svg></a>
+            <a href="#" aria-label="Instagram"><svg class="ic"><use href="#i-ig" /></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg class="ic"><use href="#i-in" /></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <a href="#" id="go-up">Go up <svg class="ic ic--sm"><use href="#i-chev-u" /></svg></a>
+        <span>© 2026. YourBrand Pvt Ltd</span>
+        <span>Made with <b class="heart">♥</b> for India</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- floating date pill + chat -->
+  <button class="float-pill" data-open-dates><svg class="ic"><use href="#i-cal" /></svg> <span id="float-label">Select rental dates to view prices</span></button>
+  <button class="chat-fab" aria-label="Chat">
+    <svg viewBox="0 0 64 64"><path d="M30 8c13 0 24 8 24 19s-11 19-24 19c-3 0-6-.4-8-1l-10 6 3-9C10 38 6 33 6 27 6 16 17 8 30 8z" fill="#1945e8"/><path d="M26 22c11 0 20 7 20 16s-9 16-20 16c-2 0-5-.3-7-1l-9 5 3-8C9 47 6 43 6 38c0-9 9-16 20-16z" fill="#7ed321"/><circle cx="17" cy="38" r="3" fill="#fff"/><circle cx="26" cy="38" r="3" fill="#fff"/><circle cx="35" cy="38" r="3" fill="#fff"/></svg>
+  </button>
+
+  <!-- ============ DATE MODAL ============ -->
+  <div class="modal" id="date-modal" hidden>
+    <div class="modal__card" role="dialog" aria-modal="true" aria-labelledby="dm-title">
+      <button class="modal__close" data-close aria-label="Close">×</button>
+      <div class="modal__left">
+        <h3 id="dm-title">Select your Dates</h3>
+        <div class="date-fields">
+          <label>Delivery Date <i>*</i><span class="field" id="f-del"><svg class="ic"><use href="#i-cal" /></svg><em>Select delivery date</em></span></label>
+          <label>Pickup Date <i>*</i><span class="field" id="f-pick"><svg class="ic"><use href="#i-cal" /></svg><em>Select pickup date</em></span></label>
+        </div>
+        <p class="note"><b>Same-day delivery</b> between <b>5PM and 11PM</b>. For future dates, choose a time slot at checkout. Pickups happen between <b>9AM to 1PM</b>.</p>
+        <p class="label">Your Rental Period:</p>
+        <div class="period"><strong id="days">00</strong><small>Day</small><div><small>Chargeable Period:</small><span id="charge">—</span></div></div>
+        <div class="save-box"><p class="save-box__title">Save more with us!</p><p>Longer rentals get bigger discounts, and delivery &amp; pickup days are never charged.</p></div>
+        <button class="btn-primary" id="continue" disabled>Continue</button>
+      </div>
+      <div class="modal__right">
+        <div class="cal-nav"><button id="prev" aria-label="Previous month">‹</button><button id="next" aria-label="Next month">›</button></div>
+        <div class="months" id="months"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" hidden></div>
+
+  <!-- ============ ICON SPRITE ============ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 21s-7-6.2-7-11a7 7 0 1 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-chev-r" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-chev-u" viewBox="0 0 24 24"><path d="m6 15 6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="m20 20-4-4" stroke="currentColor" stroke-width="2.2"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M3 4h2l2.4 11h11L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5" fill="currentColor"/><circle cx="17" cy="19.5" r="1.5" fill="currentColor"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 21a8 8 0 0 1 16 0" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 6v12M6 12h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="5" rx="1" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 13v8h14v-8M12 8v13M12 8S10 3 7.5 4.5 9 8 12 8zm0 0s2-5 4.5-3.5S15 8 12 8z" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3 12V4h8l10 10-8 8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="7.5" cy="8.5" r="1.5" fill="currentColor"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14-5l-2 2M4 13a8 8 0 0 0 14 5l2-2M4 4v4h4M20 20v-4h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-headset" viewBox="0 0 24 24"><path d="M4 14v-2a8 8 0 0 1 16 0v2M4 14h3v5H5a1 1 0 0 1-1-1zm16 0h-3v5h2a1 1 0 0 0 1-1z" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="m3 7 9 6 9-6" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="4" fill="currentColor"/><path d="M13.5 21v-7h2.3l.4-2.8h-2.7V9.5c0-.8.3-1.3 1.4-1.3h1.4V5.7c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5v2.1H8.6V14h2.3v7z" fill="#020b33"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="currentColor"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="#020b33" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.2" fill="#020b33"/></symbol>
+    <symbol id="i-in" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="4" fill="currentColor"/><path d="M7 10v7M7 7v.01M11 17v-7m0 3c0-2 1.2-3 2.7-3S16 11 16 13v4" stroke="#020b33" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="i-google" viewBox="0 0 24 24"><path d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.4a4.6 4.6 0 0 1-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.3z" fill="#4285F4"/><path d="M12 22c2.7 0 5-.9 6.6-2.4l-3.2-2.5c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.6A10 10 0 0 0 12 22z" fill="#34A853"/><path d="M6.4 14a6 6 0 0 1 0-3.9V7.5H3.1a10 10 0 0 0 0 9z" fill="#FBBC05"/><path d="M12 6c1.5 0 2.8.5 3.8 1.5l2.9-2.9A10 10 0 0 0 3.1 7.5L6.4 10C7.2 7.8 9.4 6 12 6z" fill="#EA4335"/></symbol>
+    <symbol id="i-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="10" r="1.3" fill="currentColor"/><circle cx="15" cy="10" r="1.3" fill="currentColor"/><path d="M8 14c2 2.5 6 2.5 8 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-console" viewBox="0 0 64 64"><rect x="22" y="4" width="16" height="50" rx="6" fill="#fff" stroke="#c9cbd6" stroke-width="1.5"/><rect x="28" y="6" width="4" height="46" rx="2" fill="#1b1b2b"/><path d="M6 46c0-5 4-8 9-8h14c5 0 9 3 9 8l2 8c1 4-4 6-7 3l-4-4H17l-4 4c-3 3-8 1-7-3z" fill="#2b2d42"/></symbol>
+    <symbol id="i-vr" viewBox="0 0 64 64"><rect x="6" y="20" width="52" height="24" rx="12" fill="#fff" stroke="#c9cbd6" stroke-width="1.5"/><circle cx="22" cy="32" r="6" fill="#1b1b2b"/><circle cx="42" cy="32" r="6" fill="#1b1b2b"/><path d="M6 30H2M58 30h4" stroke="#9aa0b4" stroke-width="4"/></symbol>
+    <symbol id="i-pad" viewBox="0 0 64 64"><path d="M14 22h36c7 0 11 6 12 14l1 8c1 6-6 9-10 4l-5-6H16l-5 6c-4 5-11 2-10-4l1-8c1-8 5-14 12-14z" fill="currentColor"/><path d="M18 30v8M14 34h8" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cx="44" cy="31" r="2.5" fill="#fff"/><circle cx="49" cy="36" r="2.5" fill="#fff"/></symbol>
+    <symbol id="i-wheel" viewBox="0 0 64 64"><circle cx="32" cy="32" r="24" fill="none" stroke="currentColor" stroke-width="6"/><circle cx="32" cy="32" r="6" fill="currentColor"/><path d="M8 32h18M38 32h18M32 38v18" stroke="currentColor" stroke-width="5"/></symbol>
+    <symbol id="i-screen" viewBox="0 0 64 64"><rect x="6" y="10" width="52" height="34" rx="3" fill="currentColor"/><path d="M24 54h16M32 44v10" stroke="currentColor" stroke-width="4"/></symbol>
+  </svg>
+
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

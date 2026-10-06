@@ -2,8 +2,6 @@
 
 A static HTML/CSS/JS recreation of a rental marketplace's "Gaming gadgets on rent" listing page, built as a front-end exercise.
 
-Live demo: https://vivashwan.github.io/game-page-html/ (once GitHub Pages is enabled)
-
 ## Run
 
 Open `index.html` in a browser. No build step. Fonts load from Google Fonts.

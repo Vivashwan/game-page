@@ -1,5 +1,7 @@
-// Server components call the backend directly; client components go through the /api rewrite.
-const BASE = typeof window === "undefined" ? process.env.API_URL || "http://127.0.0.1:8010" : "";
+// Server components call the backend directly: on Vercel through the service binding (BACKEND_URL),
+// locally through API_URL. In the browser, requests go to /api on the same origin.
+const SERVER_BASE = (process.env.BACKEND_URL || process.env.API_URL || "http://127.0.0.1:8010").replace(/\/+$/, "");
+const BASE = typeof window === "undefined" ? SERVER_BASE : "";
 
 export class ApiError extends Error {
   constructor(status, detail) {

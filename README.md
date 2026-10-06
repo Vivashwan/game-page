@@ -41,6 +41,17 @@ cd backend && ./.venv/bin/python -m pytest
 cd frontend && npm run lint
 ```
 
+## Deploying to Vercel
+
+`vercel.json` deploys both apps as one Vercel project using [Services](https://vercel.com/docs/services):
+
+- `backend` (FastAPI, entrypoint `app.main:app`) is public at `/api/*` and receives the full path, e.g. `/api/products`.
+- `frontend` (Next.js) serves every other path. Its server code reaches the backend through a service binding that Vercel injects as `BACKEND_URL`, so no environment variables need to be set by hand.
+
+Import the repo in Vercel with the root directory left as `./` and deploy.
+
+On Vercel the SQLite database lives in `/tmp` and is re-created from `seed.sql` whenever a new server instance starts, so votes are not permanent. For durable data, point the backend at a hosted database such as Postgres.
+
 ## REST API
 
 | Method | Path                          | Description |

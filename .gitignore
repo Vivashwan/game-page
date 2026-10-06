@@ -1,0 +1,14 @@
+# Python
+backend/.venv/
+__pycache__/
+.pytest_cache/
+backend/db/*.sqlite3
+
+# Node / Next.js
+frontend/node_modules/
+frontend/.next/
+frontend/next-env.d.ts
+frontend/.env*.local
+frontend/.env
+
+.DS_Store
